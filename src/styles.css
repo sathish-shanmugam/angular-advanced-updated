@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+header{
+    margin-top:80px;
+}
+ol{
+    list-style: none;
+}
+app-detail{
+    width: 100% !important;
+    display: block;
+}
+#loader{
+    width:100%;
+    height: 100%;
+    z-index: 9;  
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;  
+    text-align: center; 
+}
+#loader .spinner-border{
+    top: 50%;
+    position: fixed;
+    left: 50%;
+}
+app-home-page, app-detail{
+    position: relative;
+}
+
+.bg-1{
+    background-color: darkgreen;
+}
+.clr-1{
+    color: white;
+}
+.imageSize1{
+    max-width: 150px;
+    max-height: 150px;
+}
+.imageSize2{
+    max-width: 70px;
+    max-height: 70px;
+}

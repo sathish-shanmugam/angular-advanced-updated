@@ -1,0 +1,16 @@
+<ol class="row products">
+    <li *ngFor="let product of productList" class="col-md-3 text-center" >
+        <a *ngIf="product.customList; else nonCustomList" [routerLink]="['/detail']" [queryParams]="{id:product.customList.id}" >
+            <img src="{{product.customList.imageUrl}}" height="150" width="150" />
+            <p>{{ product.name }}</p>
+        </a>
+
+        <ng-template #nonCustomList>
+            <a href="javascript:void()">
+                <img alt="Product Image" title="{{product.Name}}" src="{{product.ImageURL}}" height="150" width="150"  />
+                <p>{{ product.Name }}</p>
+            </a>
+        </ng-template>
+
+    </li>
+</ol>

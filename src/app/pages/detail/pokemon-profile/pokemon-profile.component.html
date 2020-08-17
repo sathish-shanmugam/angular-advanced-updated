@@ -1,0 +1,18 @@
+<div class="col-md-12">
+    <h2 class="mb-3 mt-5 clr-1 bg-1 p-1">Profile</h2>
+    <div class="row mb-3">
+        <div class="col-md-3"><strong>Height:</strong></div>
+        <div class="col-md-3">{{productDetail['height']}} m</div>
+        <div class="col-md-3"><strong>Weight:</strong></div>
+        <div class="col-md-3">{{productDetail['weight']}} kg</div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-3"><strong>Species:</strong></div>
+        <div class="col-md-3">{{productDetail['species']['name']}}</div>
+        <div class="col-md-3"><strong>Abilities:</strong></div>
+        <div class="col-md-3">
+            <span *ngFor="let abi of productDetail['abilities']; last as isLast">
+                <span>{{abi['ability']['name']}}<span [hidden]="isLast">, </span></span></span>
+        </div>
+    </div>
+</div>

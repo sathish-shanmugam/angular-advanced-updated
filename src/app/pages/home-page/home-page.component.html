@@ -1,0 +1,10 @@
+<div id="loader" *ngIf="showLoader">
+  <div class="spinner-border"></div>
+</div>
+
+<app-product-card [productList]="products"></app-product-card>
+
+  <div class="col-12" *ngIf="products.length > 0">
+    <button class="btn btn-primary m-1 float-right" [disabled]="navigations['next'] == null"  type="button" (click)="navValue('next')"> Next </button>
+    <button class="btn btn-primary m-1 float-right" [disabled]="navigations['prev'] == null" type="button" (click)="navValue('prev')"> Previous </button>
+  </div>

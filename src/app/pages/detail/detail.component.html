@@ -1,0 +1,33 @@
+<div class="container">
+    <div id="loader" *ngIf="showLoader">
+        <div class="spinner-border"></div>
+    </div>
+    <div class="row" *ngIf="productDetail">
+        <h1 class="col-md-12 text-center mb-4 clr-1 bg-1 p-2">{{productDetail['name'] | uppercase}}</h1>
+
+        <!-- product statistics --> 
+        <div class="col-md-12 mb-4">
+            <app-pokemon-statistics class="row" [productDetail] = 'productDetail'></app-pokemon-statistics>
+        </div>   
+       
+
+        <!-- product profile -->
+        <div class="col-md-12 mb-4">
+            <app-pokemon-profile class="row" [productDetail] = 'productDetail'></app-pokemon-profile>
+        </div>
+
+
+        <!-- product evolution -->
+        <div class="col-md-12 mb-4">
+            <app-pokemon-evolution class="row" [productDetail] = 'productDetail'></app-pokemon-evolution>
+        </div>
+
+
+        <!-- product damage -->
+        <div class="col-md-12 mb-4">
+            <app-pokemon-damage class="row" [productDetail] = 'productDetail'></app-pokemon-damage>            
+        </div>
+
+
+    </div>
+</div>

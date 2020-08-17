@@ -1,0 +1,19 @@
+.products li{
+    box-sizing: border-box;
+    box-shadow: 5px 10px 5px 5px #fafafa;
+}
+.products li a{
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fafafa;
+    float: left;
+    width: 100%;
+}
+.products li a img{
+    max-width: 100%;
+}
+.products li a:hover{
+    box-shadow:1px 1px 6px 0px #bbb
+}

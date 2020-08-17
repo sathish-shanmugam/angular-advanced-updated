@@ -1,0 +1,21 @@
+<div class="col-md-4 text-center">
+    <img class="img-fluid" src="{{productDetail['sprites']['other']['dream_world']['front_default']}}"
+        alt="Product Image" />
+</div>
+<div class="col-md-3">
+    <h4 *ngIf="productDetail['types'][0]" style="background-color: green; color: #fff;" class="text-center">
+        {{productDetail['types'][0]['type']['name'] | uppercase}}</h4>
+    <div *ngFor="let stat of productDetail['stats']">
+        <h5 class="statNormal">{{stat.stat.name}}</h5>
+    </div>
+</div>
+<div class="col-md-3">
+    <h4 *ngIf="productDetail['types'][1]" style="background-color:purple; color: #fff;" class="text-center">
+        {{productDetail['types'][1]['type']['name'] | uppercase}}</h4>
+    <div *ngFor="let stat of productDetail['stats']">
+        <h5 class="statBorder">{{stat.base_stat}}</h5>
+    </div>
+</div>
+<div class="col-md-2 text-center">
+    <h2>#{{productDetail['id']}}</h2>
+</div>

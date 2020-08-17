@@ -1,0 +1,18 @@
+<div class="col-md-12">
+    <h2 class="mb-5 mt-5 clr-1 bg-1 p-1">Evolutions</h2>
+    <div class="row mb-3">
+        <div class="col-md-5 text-center">
+            <img class="imageSize1" src="{{productDetail['sprites']['other']['dream_world']['front_default']}}"
+                alt="Product Image" />
+        </div>
+        <div class="col-md-2 text-center">
+            <img  class="imageSize2 mt-5" src="../../../../assets/rightArrow.png"
+            alt="Right Arrow" />
+        </div>
+        <div class="col-md-5 text-center">
+            <img  class="imageSize1" src="{{evolutionProduct['imageUrl']}}"
+                alt="Product Image" />
+        </div>
+    </div>
+    <h5 class="text-center mt-2">{{productDetail['name']}} evolves into {{evolutionProduct['name']}} <strong [hidden]="evolutionProduct['level']?false:true">at level {{evolutionProduct['level']}}</strong></h5>
+</div>
